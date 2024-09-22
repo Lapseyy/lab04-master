@@ -23,20 +23,14 @@ def modify_contact(contact, first_name, last_name, id = None):
     contact[id] = [first_name, last_name]
     return {id: contact[id]}
         
-def delete_contact(contact, index):
+def delete_contact(contact, id = None):
     """Delete contacts in contacts. Args: delete_contacts (contacts): _description_"""
-    
-    # index = input("List index number to delete: ")
-    if str(index).isdigit():
-        index = int(index)
-        if index >=0 and index < len(contacts):
-            contacts.pop(index)
-            
-            return True
-    # else:
-    #     #print("Invalid index number.")
-    #     return contacts
-    return False
+    contact = {}
+    if id not in contact:
+        print("error")
+    delete = {id: contact.pop(id)}
+    return delete
+
 def sort_contacts(contacts, column):
     # column = input()
     if str(column).isdigit():
