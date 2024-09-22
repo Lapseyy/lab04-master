@@ -31,6 +31,11 @@ def delete_contact(contact, id = None):
     delete = {id: contact.pop(id)}
     return delete
 
+def sort_contacts(contact):
+    """ Sort contacts in contacts. Args: delete_contacts (contacts): _description_"""
+    sorted_contacts = dict(sorted(contact.items(), key=lambda x: (x[1][1].lower(), x[1][0].lower())))
+    return sorted_contacts
+
 def find_contact(contact, find=None):
     """
     Finds contacts by phone number or name substring.
