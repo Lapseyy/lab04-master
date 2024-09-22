@@ -31,20 +31,19 @@ def delete_contact(contact, id = None):
     delete = {id: contact.pop(id)}
     return delete
 
-def sort_contacts(contacts, column):
-    # column = input()
-    if str(column).isdigit():
-        column = int(column)
-        # alphabetize = sorted(contacts, key = lambda x: x[1], reverse=False)
-        if column == 0:
-            contacts.sort(key = lambda x: x[0])
-            #contacts.sort(key=lambda x: x[1])
-            #return alphabetize
-        else:
-            # last_reverse = sorted(contacts, key = lambda x: x[1])
-            # contacts.sort(key=lambda x: x[1])
-            contacts.sort(key = lambda x: x[1])
-
-def find_contact(contacts, find):
-    name = {}
+def find_contact(contact, find=None):
+    """
+    Finds contacts by phone number or name substring.
+    """
+    contact = {}
     
+    if find.isdigit() and int(find) in contact:
+        contact[int(find)] = contact[int(find)]
+    
+    for id, (first_name, last_name) in contact.items():
+        if find.lower() in first_name.lower() or find.lower() in last_name.lower():
+            contact[id] = [first_name, last_name]
+    
+
+    sorted_contacts = dict(sorted(contact.items(), key=lambda x: (x[1][1].lower(), x[1][0].lower())))
+    return sorted_contacts
