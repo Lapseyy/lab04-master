@@ -15,23 +15,15 @@ def add_contact(contact, first_name, last_name, id = None):
     contact[id] = [first_name, last_name]
     return {id: contact[id]}
     
-def modify_contact(contacts, first_name, last_name, index):
+def modify_contact(contact, first_name, last_name, id = None):
     """Modifies the contact list. Args: modify_contact(contact_list) _description_."""
-    # userIndex = input("List index number you want to modify: ")
-    if str(index).isdigit():
-        index = int(index)
-        if index >= 0 and index < len(contacts):
-            # first_name = input("Enter first name: ")
-            # last_name = input("Enter last name: ")
-            contacts[index] = [first_name, last_name]
-            return True
-    #     else: 
-    #         print("Invalid index number.")
-    # else:
-    #     print("Invalid index number.")
-    return False
+    contact = {}
+    if id not in contact:
+        print("error")
+    contact[id] = [first_name, last_name]
+    return {id: contact[id]}
         
-def delete_contact(contacts, index):
+def delete_contact(contact, index):
     """Delete contacts in contacts. Args: delete_contacts (contacts): _description_"""
     
     # index = input("List index number to delete: ")
