@@ -1,86 +1,38 @@
-EEEEEEEEE
-======================================================================
-ERROR: test_list_int (__main__.Test01_AddContact)
-*** Test01 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: add_contact(c, id = 7145551212, first_name = 'Richard', last_name = 'Stallman') *** EXPECT: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates'], 7145551212: ['Richard', 'Stallman']} ***
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\edmar\OneDrive\Documents\CSUF Fall 2024\Python\Assignments\Assignment 4\lab04\lab04-master\test.py", line 14, in test_list_int
-    add_contact(c, id = 7145551212, first_name = 'Richard', last_name = 'Stallman')
-TypeError: add_contact() got an unexpected keyword argument 'id'
-
-======================================================================
-ERROR: test_list_int (__main__.Test02_AddContact)
-*** Test02 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = add_contact(c, id = 7145551111, first_name = 'Richard', last_name = 'Stallman') *** EXPECT: r = 'error' ***
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\edmar\OneDrive\Documents\CSUF Fall 2024\Python\Assignments\Assignment 4\lab04\lab04-master\test.py", line 24, in test_list_int
-    r = add_contact(c, id = 7145551111, first_name = 'Richard', last_name = 'Stallman')
-TypeError: add_contact() got an unexpected keyword argument 'id'
-
-======================================================================
-ERROR: test_list_int (__main__.Test03_ModifyContact)
-*** Test03 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: modify_contact(c, id = 7145551111, first_name = 'Richard', last_name = 'Stallman') *** EXPECT: c = {7145551111: ['Richard', 'Stallman'], 5625553333: ['Bill', 'Gates']} ***
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\edmar\OneDrive\Documents\CSUF Fall 2024\Python\Assignments\Assignment 4\lab04\lab04-master\test.py", line 34, in test_list_int
-    modify_contact(c, id = 7145551111, first_name = 'Richard', last_name = 'Stallman')
-TypeError: modify_contact() got an unexpected keyword argument 'id'
-
-======================================================================
-ERROR: test_list_int (__main__.Test04_ModifyContact)
-*** Test04 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = modify_contact(c, id = 7145559999, first_name = 'Richard', last_name = 'Stallman') *** EXPECT: r = 'error' ***
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\edmar\OneDrive\Documents\CSUF Fall 2024\Python\Assignments\Assignment 4\lab04\lab04-master\test.py", line 44, in test_list_int
-    r = modify_contact(c, id = 7145559999, first_name = 'Richard', last_name = 'Stallman')
-TypeError: modify_contact() got an unexpected keyword argument 'id'
-
-======================================================================
-ERROR: test_list_int (__main__.Test05_DeleteContact)
-*** Test05 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: delete_contact(c, id = 7145551111) *** EXPECT: c = {5625553333: ['Bill', 'Gates']} ***
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\edmar\OneDrive\Documents\CSUF Fall 2024\Python\Assignments\Assignment 4\lab04\lab04-master\test.py", line 54, in test_list_int
-    delete_contact(c, id = 7145551111)
-TypeError: delete_contact() got an unexpected keyword argument 'id'
-
+.....E.FF
 ======================================================================
 ERROR: test_list_int (__main__.Test06_DeleteContact)
 *** Test06 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = delete_contact(c, id = 7145559999) *** EXPECT: r = 'error' ***
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\edmar\OneDrive\Documents\CSUF Fall 2024\Python\Assignments\Assignment 4\lab04\lab04-master\test.py", line 64, in test_list_int
+  File "/Users/edmarcksosa/Documents/Spring 2024/Python/lab04-master/test.py", line 64, in test_list_int
     r = delete_contact(c, id = 7145559999)
-TypeError: delete_contact() got an unexpected keyword argument 'id'
+  File "/Users/edmarcksosa/Documents/Spring 2024/Python/lab04-master/contacts.py", line 31, in delete_contact
+    delete = {id: contact.pop(id)}
+KeyError: 7145559999
 
 ======================================================================
-ERROR: test_list_int (__main__.Test07_SortContacts)
-*** Test07 *** GIVEN: c = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = sort_contacts(c) *** EXPECT: r = {5625553333: ['Bill', 'Gates'], 7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']} ***
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\edmar\OneDrive\Documents\CSUF Fall 2024\Python\Assignments\Assignment 4\lab04\lab04-master\test.py", line 74, in test_list_int
-    r = sort_contacts(c)
-TypeError: sort_contacts() missing 1 required positional argument: 'column'
-
-======================================================================
-ERROR: test_list_int (__main__.Test08_FindContact)
+FAIL: test_list_int (__main__.Test08_FindContact)
 *** Test08 *** GIVEN: c = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = find_contact(c, find = 'jobs') *** EXPECT: r = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']} ***
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\edmar\OneDrive\Documents\CSUF Fall 2024\Python\Assignments\Assignment 4\lab04\lab04-master\test.py", line 84, in test_list_int
-    r = find_contact(c, find = 'jobs')
-NameError: name 'find_contact' is not defined
+  File "/Users/edmarcksosa/Documents/Spring 2024/Python/lab04-master/test.py", line 85, in test_list_int
+    self.assertEqual(r, {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']})
+AssertionError: {} != {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']}
+- {}
++ {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']}
 
 ======================================================================
-ERROR: test_list_int (__main__.Test09_FindContact)
+FAIL: test_list_int (__main__.Test09_FindContact)
 *** Test09 *** GIVEN: c = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = find_contact(c, find = '5625553333') *** EXPECT: r = {5625553333: ['Bill', 'Gates']} ***
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\edmar\OneDrive\Documents\CSUF Fall 2024\Python\Assignments\Assignment 4\lab04\lab04-master\test.py", line 94, in test_list_int
-    r = find_contact(c, find = '5625553333')
-NameError: name 'find_contact' is not defined
+  File "/Users/edmarcksosa/Documents/Spring 2024/Python/lab04-master/test.py", line 95, in test_list_int
+    self.assertEqual(r, {5625553333: ['Bill', 'Gates']})
+AssertionError: {} != {5625553333: ['Bill', 'Gates']}
+- {}
++ {5625553333: ['Bill', 'Gates']}
 
 ----------------------------------------------------------------------
 Ran 9 tests in 0.001s
 
-FAILED (errors=9)
+FAILED (failures=2, errors=1)

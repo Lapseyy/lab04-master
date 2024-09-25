@@ -16,8 +16,11 @@ def menu():
 def main():
     # contacts_list = [["Richard","Stallman"],["Bill","Gates"]]
     contacts_list = {}
+    # contacts_list = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']}
+    # c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']}
     while True:
         menu()
+        
         choice = input("Enter menu choice: ")
         if choice.isdigit():
             choice = int(choice)
@@ -28,11 +31,14 @@ def main():
             elif choice == 2:
                 #contact_list = contacts.add_contact(contacts_list, first_name = input("insert first name: "), last_name = input("insert last name: "))
                 id = input("Enter phone number (ID): ")
+        
                 first_name = input("Enter first name: ")
                 last_name = input("Enter last name: ")
                 result = contacts.add_contact(contacts_list, first_name=first_name, last_name=last_name, id=int(id))
+                # if result == "error":
+                #     print("Error: Contact already exists.")
                 if result == "error":
-                    print("Error: Contact already exists.")
+                    print("error")        
                 else:
                     print(f"Contact added: {result}")
                         

@@ -9,23 +9,23 @@
 
 def add_contact(contact, first_name, last_name, id = None):
     """Adds contact to the list of names.  Args: add_contact (contacts): _description_."""
-    contact = {}
+    # contact = {}
     if id in contact:
-        print("error")
+        return "error"
     contact[id] = [first_name, last_name]
     return {id: contact[id]}
     
 def modify_contact(contact, first_name, last_name, id = None):
     """Modifies the contact list. Args: modify_contact(contact_list) _description_."""
-    contact = {}
+    # contact = {}
     if id not in contact:
-        print("error")
+        return("error")
     contact[id] = [first_name, last_name]
     return {id: contact[id]}
         
 def delete_contact(contact, id = None):
     """Delete contacts in contacts. Args: delete_contacts (contacts): _description_"""
-    contact = {}
+    # contact = {}
     if id not in contact:
         print("error")
     delete = {id: contact.pop(id)}
