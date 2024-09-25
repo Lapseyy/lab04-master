@@ -73,8 +73,13 @@ def main():
 
             elif choice == 5:
                 # FIND CONTACT
-                contact_list = contacts.sort_contacts(contacts_list, column=input()) 
-                
+                # contact_list = contacts.sort_contacts(contacts_list, column=input())
+                find = input("Enter phone number or name to find: ")
+                found_contacts = contacts.find_contact(contacts_list, find=find)
+                if found_contacts:
+                    print("Found contacts:")
+                    for id, names in found_contacts.items():
+                        print(f"Phone: {id}, First Name: {names[0]}, Last Name: {names[1]}")
             
 
             elif choice == 6:

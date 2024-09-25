@@ -40,15 +40,15 @@ def find_contact(contact, find=None):
     """
     Finds contacts by phone number or name substring.
     """
-    contact = {}
+    found_contact = {}
     
     if find.isdigit() and int(find) in contact:
-        contact[int(find)] = contact[int(find)]
+        found_contact[int(find)] = contact[int(find)]
     
     for id, (first_name, last_name) in contact.items():
         if find.lower() in first_name.lower() or find.lower() in last_name.lower():
-            contact[id] = [first_name, last_name]
+            found_contact[id] = [first_name, last_name]
     
 
-    sorted_contacts = dict(sorted(contact.items(), key=lambda x: (x[1][1].lower(), x[1][0].lower())))
+    sorted_contacts = dict(sorted(found_contact.items(), key=lambda x: (x[1][1].lower(), x[1][0].lower())))
     return sorted_contacts

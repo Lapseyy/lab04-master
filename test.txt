@@ -1,27 +1,5 @@
-.......FF
-======================================================================
-FAIL: test_list_int (__main__.Test08_FindContact)
-*** Test08 *** GIVEN: c = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = find_contact(c, find = 'jobs') *** EXPECT: r = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']} ***
+.........
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/edmarcksosa/Documents/Spring 2024/Python/lab04-master/test.py", line 85, in test_list_int
-    self.assertEqual(r, {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']})
-AssertionError: {} != {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']}
-- {}
-+ {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']}
+Ran 9 tests in 0.000s
 
-======================================================================
-FAIL: test_list_int (__main__.Test09_FindContact)
-*** Test09 *** GIVEN: c = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = find_contact(c, find = '5625553333') *** EXPECT: r = {5625553333: ['Bill', 'Gates']} ***
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/edmarcksosa/Documents/Spring 2024/Python/lab04-master/test.py", line 95, in test_list_int
-    self.assertEqual(r, {5625553333: ['Bill', 'Gates']})
-AssertionError: {} != {5625553333: ['Bill', 'Gates']}
-- {}
-+ {5625553333: ['Bill', 'Gates']}
-
-----------------------------------------------------------------------
-Ran 9 tests in 0.001s
-
-FAILED (failures=2)
+OK
