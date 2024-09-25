@@ -1,15 +1,4 @@
-.....E.FF
-======================================================================
-ERROR: test_list_int (__main__.Test06_DeleteContact)
-*** Test06 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = delete_contact(c, id = 7145559999) *** EXPECT: r = 'error' ***
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/edmarcksosa/Documents/Spring 2024/Python/lab04-master/test.py", line 64, in test_list_int
-    r = delete_contact(c, id = 7145559999)
-  File "/Users/edmarcksosa/Documents/Spring 2024/Python/lab04-master/contacts.py", line 31, in delete_contact
-    delete = {id: contact.pop(id)}
-KeyError: 7145559999
-
+.......FF
 ======================================================================
 FAIL: test_list_int (__main__.Test08_FindContact)
 *** Test08 *** GIVEN: c = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = find_contact(c, find = 'jobs') *** EXPECT: r = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']} ***
@@ -35,4 +24,4 @@ AssertionError: {} != {5625553333: ['Bill', 'Gates']}
 ----------------------------------------------------------------------
 Ran 9 tests in 0.001s
 
-FAILED (failures=2, errors=1)
+FAILED (failures=2)

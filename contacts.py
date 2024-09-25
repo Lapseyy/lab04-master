@@ -27,7 +27,7 @@ def delete_contact(contact, id = None):
     """Delete contacts in contacts. Args: delete_contacts (contacts): _description_"""
     # contact = {}
     if id not in contact:
-        print("error")
+        return "error"
     delete = {id: contact.pop(id)}
     return delete
 
